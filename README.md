@@ -19,6 +19,7 @@ In this task, the _printf function produces output according to a format.
 	- c
 	- s
 	- %
+
 **Exemptions:** The following are exempted and are not required for this task
 - Buffer handling of the C library printf function
 - Field width
