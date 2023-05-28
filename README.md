@@ -70,10 +70,7 @@ For this task, the function handles the following conversion specifier: p.
 - Length modifiers
 
 ### Task 7
-For this task, the function handles the following flag characters for non-custom conversion specifiers:
-- +
-- space
-- #
+For this task, the function handles the following flag characters for non-custom conversion specifiers: "+", "space", and "#"
 
 ### Task 8
 For this task, the function handles the following length modifiers for non-custom conversion specifiers:
