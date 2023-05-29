@@ -88,3 +88,25 @@ int char_printer(va_list args)
 	return (1);
 }
 
+/**
+ * string_printer _ prints string from the list of arguments
+ * @args: A va_list, containing the list of variables
+ * Return: Empty string if it's NULL, else number of character printed
+ */
+int string_printer(va_list args)
+{
+	int count = 0;
+	const char *s;
+
+	s = va_arg(args, const char *);
+	if (s == NULL) {s = "(null)";}
+
+	while(s[count] != '\0')
+	{
+		_putchar(s[count]);
+		count++;
+	}
+
+	return (count);
+}
+
