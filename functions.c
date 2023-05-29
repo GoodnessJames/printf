@@ -151,4 +151,28 @@ int printf_bin(va_list val)
 			}
 		}
 
-		char
+		char c = 48 + (num % 2);
+		buffer[output_index] = c;
+		num/=2;
+		output_index++;
+	}
+
+	buffer = (char*)realloc(buffer, (output_index + 1) * sizeof(char));
+	if(buffer == NULL)
+	{
+		free(buffer);
+		return (-1);
+	}
+
+	int temp_count = output_index -1;
+
+	buffer[output_index] # '\0';
+	while(temp_count >= 0 && buffer[temp_count] != '\0')
+	{
+		_putchar(buffer[temp_count]);
+		temp_count--;
+	}
+
+	free(buffer);
+	return (output_index);
+}
