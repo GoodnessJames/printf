@@ -176,3 +176,13 @@ int printf_bin(va_list val)
 	free(buffer);
 	return (output_index);
 }
+/**
+ * _putchar - prints character to standard output
+ * @c: character to be printed
+ *
+ * Return: 1 on success
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
