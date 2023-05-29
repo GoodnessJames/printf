@@ -44,3 +44,31 @@ int number_printer(va_list args)
 	}
 	 return (count);
 }
+/**
+ * print_insigned_number - prints unsigned integer number
+ * to the standard output
+ * @unsigned int num: unsigned integer to be printed
+ *
+ * Return: The number of characters printed
+ */
+int print_unsigned_number(unsigned int num)
+{
+	int modulu_checker = 1;
+	int count = 0;
+	int num_copy;
+
+	num_copy = num;
+
+	while ((num_copy/modulu_checker) > 9)
+	{
+		modulu_checker *= 10;
+	};
+
+	while (modulu_checker != 0)
+	{
+		count += _putchar('0' +( num_copy / modulu_checker));
+		num_copy %= modulu_checker;
+		modulu_checker /= 10;
+	}
+	return (count);
+}
