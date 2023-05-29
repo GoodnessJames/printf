@@ -72,3 +72,19 @@ int print_unsigned_number(unsigned int num)
 	}
 	return (count);
 }
+
+/**
+ * char_printer - prints character variable as an argument
+ * @va_list args: Number of arguments as variables
+ *
+ * Return: 1 upon success by counting number printed
+ */
+int char_printer(va_list args)
+{
+	char character;
+
+	character = va_arg(args, int);
+	_putchar(character);
+	return (1);
+}
+
