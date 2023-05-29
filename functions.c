@@ -123,3 +123,32 @@ int percent_printer(__attribute__((unused)) va_list args)
 	return (1);
 }
 
+/**
+ * printf_bin - converts anbunsigned integer into its binary representation in allocated character buffer
+ * @val: a va_list containing the unsigned int value to be converted to be converted to binary
+ *
+ * Return: Dianamically allocated char buffer on success
+ * otherwise return NULL
+ * if the buffer becomes filled it will be resized using realloc but if ir fails utvwill return -1 and frees.
+ */
+int printf_bin(va_list val)
+{
+	int ouput_index = 0;
+	unsigned int num = va_arg(val, unsigned int);
+	char *buffer;
+	int buffersize = BUFFER_SIZE;
+	buffer = (char *)malloc((buffersize + 1) * sizeof(char));
+	while (num>0)
+	{
+		if(output_index == bufersize)
+		{
+			buffersize += BUFFER_SIZE;
+			buffer =(char *)realloc(buffer, buffersize *sizeof(char));
+			if(buffer == NULL)
+			{
+				free(buffer);
+				return (-1);
+			}
+		}
+
+		char
