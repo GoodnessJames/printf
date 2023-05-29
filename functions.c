@@ -110,3 +110,16 @@ int string_printer(va_list args)
 	return (count);
 }
 
+/**
+ * percent_printer - prints '%' using the _putchar function
+ * @__attrubute__((unused)): variable number of unused arguments
+ * @args: va_list of arguments
+ * 
+ * Return: 1 upon success
+ */
+int percent_printer(__attribute__((unused)) va_list args)
+{
+	_putchar('%');
+	return (1);
+}
+
