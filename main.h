@@ -1,27 +1,23 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 /*
  * File: main.h
  * Desc: This file contains all prototypes & struct required for the project
  */
 
-#ifndef MAIN_H
-#define MAIN_H
-
 /* Standard C Library Headers */
-#include <stdbool.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
 
-/* Buffer Size Definition used during memory allocation (malloc) */
-#define BUFFER_SIZE 10
-
 /**
- * struct convert - A new type defining a struct called type_checker
+ * struct checker - A new type struct defining a struct called type_checker
  * @id: A pointer to the format specifier
- * @fPtr: A function pointer to the matching function
+ * @fPtr: Function pointer
  */
-typedef struct convert
+typedef struct checker
 {
 	char *id;
 	int (*fPtr)(va_list);
@@ -30,14 +26,29 @@ typedef struct convert
 /* Function Prototypes */
 int _putchar(char c);
 int _printf(const char *format, ...);
-void _vprintf(const char *format, va_list args);
-int format_parser(const char *format, va_list args);
-int char_printer(va_list);
-int string_printer(va_list args);
-int percent_printer(va_list);
-int unsignedInt_printer(unsigned int n);
-int num_printer(va_list);
-int num_printer(va_list);
-int binary_converter(va_list val);
+int(*specifier_parser(const char *format, int i))(va_list);
+int print_specialFormat(const char *format, int i);
+
+/* Function Prototypes in File: char_func.c */
+int print_char(va_list chars);
+int print_str(va_list str);
+int print_Str(va_list Str);
+int print_revStr(va_list revStr);
+int print_rotString(va_list rotString);
+/* Function Prototypes in File: int_func.c */
+int print_int(va_list nums);
+int print_binary(va_list bi);
+/* Function Prototypes in File: base_func.c */
+int print_uInt(va_list);
+int print_octBase(va_list);
+int print_hexBase(va_list);
+int print_HEXbase(va_list);
+int print_hexStr(va_list);
+/* Flag Prototypes */
+int plusFlag(va_list);
+int spaceFlag(va_list);
+int octFlag(va_list);
+int hexFlag(va_list);
+int HEXflag(va_list);
 
 #endif
