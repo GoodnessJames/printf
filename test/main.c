@@ -1,4 +1,5 @@
 #include <limits.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -13,7 +14,6 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
-	_printf("%b\n", 46);
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
