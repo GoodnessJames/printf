@@ -137,7 +137,6 @@ int print_revStr(va_list revStr)
 		;
 	}
 	i--;
-
 	for (; i >= 0; i--)
 	{
 		_putchar(str[i]);
