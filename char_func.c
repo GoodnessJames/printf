@@ -29,9 +29,10 @@ int print_str(va_list str)
 	{
 		Pstr = "(null)";
 	}
-	for (i = 0; Pstr[i]; i++)
+	while (Pstr[i])
 	{
 		_putchar(Pstr[i]);
+		i++;
 	}
 	return (i);
 }
