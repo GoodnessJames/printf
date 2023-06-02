@@ -25,7 +25,7 @@ int print_str(va_list str)
 	int i = 0;
 
 	Pstr = va_arg(str, char *);
-	if (*Pstr == '\0')
+	if (Pstr == NULL)
 	{
 		Pstr = "(null)";
 	}
@@ -45,30 +45,33 @@ int print_Str(va_list Str)
 {
 	int count, i, j;
 	char *Pstr = va_arg(Str, char *);
-	unsigned char n, unsigned char hex[2];
+	unsigned char n, hex[2];
 
+	Pstr = va_arg(Str, char *);
 	if (Pstr == NULL)
 		Pstr = "(null)";
 	count = 0;
-	for (i = 0; Pstr[i] != '\0', i++)
+	for (i = 0; Pstr[i] != '\0'; i++)
 	{
 		if ((Pstr[i] > 0 && Pstr[i] < 32) || (Pstr[i] >= 127))
 		{
 			count += _putchar('\\');
 			count += _putchar('x');
 			n = (unsigned char) Pstr[i];
-			hex[2] = {n / 16, n % 16};
+			hex[0] = n / 16;
+			hex[1] = n % 16;
 			for (j = 0; j < 2; j++)
 			{
 				if (hex[j] >= 10)
 					count += _putchar(hex[j] - 10 + 'A');
 				else
-					count += _putchar(hex[j] + '0')
+					count += _putchar(hex[j] + '0');
 			}
-			else
-				count += _putchar(Pstr[i]);
 		}
-
+		else
+			{
+				count += _putchar(Pstr[i]);
+			}
 	}
 	return (count);
 }

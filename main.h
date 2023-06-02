@@ -36,6 +36,7 @@ int print_Str(va_list Str);
 int print_revStr(va_list revStr);
 int print_rotString(va_list rotString);
 /* Function Prototypes in File: int_func.c */
+int print_percent(__attribute__((unused)) va_list args);
 int print_int(va_list nums);
 int print_binary(va_list bi);
 /* Function Prototypes in File: base_func.c */

@@ -148,7 +148,7 @@ int print_HEXbase(va_list HEX)
 }
 /**
  * print_hexStr - Prints a string and returns string length
- * @@hexStr: List of variadic arguments
+ * @hexStr: List of variadic arguments
  * Return: Returns (count) ALWAYS
  */
 int print_hexStr(va_list hexStr)
