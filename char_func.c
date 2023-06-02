@@ -43,38 +43,45 @@ int print_str(va_list str)
  */
 int print_Str(va_list Str)
 {
-	int count, i, j;
-	char *Pstr = va_arg(Str, char *);
-	unsigned char n, hex[2];
+	char *Pstr, hexSize[10];
+	int i = 0, n = 0, j = 0;
+	unsigned int count = 0;
 
 	Pstr = va_arg(Str, char *);
-	if (Pstr == NULL)
+	if (*Pstr == '\0')
 		Pstr = "(null)";
-	count = 0;
-	for (i = 0; Pstr[i] != '\0'; i++)
+	for (i = 0; Pstr[i]; i++)
 	{
+		j = 0;
 		if ((Pstr[i] > 0 && Pstr[i] < 32) || (Pstr[i] >= 127))
 		{
-			count += _putchar('\\');
-			count += _putchar('x');
-			n = (unsigned char) Pstr[i];
-			hex[0] = n / 16;
-			hex[1] = n % 16;
-			for (j = 0; j < 2; j++)
+			_putchar('\\');
+			_putchar('x');
+			n = Pstr[i];
+			if (n <= 15)
+				_putchar('0');
+			while (n > 0)
 			{
-				if (hex[j] >= 10)
-					count += _putchar(hex[j] - 10 + 'A');
+				if (n % 16 >= 10 && n % 16 <= 15)
+					hexSize[j] = 55 + (n % 16);
 				else
-					count += _putchar(hex[j] + '0');
+					hexSize[j] = 48 + (n % 16);
+				n = n / 16;
+				j++;
 			}
+			for (--j; j >= 0; j--)
+				_putchar(hexSize[j]);
+			count += 4;
 		}
 		else
-			{
-				count += _putchar(Pstr[i]);
-			}
+		{
+			_putchar(Pstr[i]);
+			count++;
+		}
 	}
-	return (count);
+return (count);
 }
+
 /**
  * print_rotString - prints the rot13'ed string
  * @rot: List of variadic arguments
@@ -107,6 +114,7 @@ int print_rotString(va_list rot)
 	}
 	return (count);
 }
+
 /**
  * print_revStr - Prints a string in reverse and returns the string length
  * @revStr: List of variadic arguments
