@@ -43,41 +43,32 @@ int print_str(va_list str)
  */
 int print_Str(va_list Str)
 {
-	char *Pstr, hexSize[10];
-	int i = 0, n = 0, j = 0;
-	unsigned int count = 0;
+	int count, i, j;
+	char *Pstr = va_arg(Str, char *);
+	unsigned char n, unsigned char hex[2];
 
-	Pstr = va_arg(Str, char *);
-	if (*Pstr == '\0')
+	if (Pstr == NULL)
 		Pstr = "(null)";
-	for (i = 0; Pstr[i]; i++)
+	count = 0;
+	for (i = 0; Pstr[i] != '\0', i++)
 	{
-		j = 0;
 		if ((Pstr[i] > 0 && Pstr[i] < 32) || (Pstr[i] >= 127))
 		{
-			_putchar('\\');
-			_putchar('x');
-			n = Pstr[i];
-			if (n <= 15)
-				_putchar('0');
-			while (n > 0)
+			count += _putchar('\\');
+			count += _putchar('x');
+			n = (unsigned char) Pstr[i];
+			hex[2] = {n / 16, n % 16};
+			for (j = 0; j < 2; j++)
 			{
-				if (n % 16 >= 10 && n % 16 <= 15)
-					hexSize[j] = 55 + (n % 16);
+				if (hex[j] >= 10)
+					count += _putchar(hex[j] - 10 + 'A');
 				else
-					hexSize[j] = 48 + (n % 16);
-				n = n / 16;
-				j++;
+					count += _putchar(hex[j] + '0')
 			}
-			for (--j; j >= 0; j--)
-				_putchar(hexSize[j]);
-			count += 4;
+			else
+				count += _putchar(Pstr[i]);
 		}
-		else
-		{
-			_putchar(Pstr[i]);
-			count++;
-		}
+
 	}
 	return (count);
 }
