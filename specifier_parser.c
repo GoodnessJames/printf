@@ -30,6 +30,8 @@ int(*specifier_parser(const char *format, int i))(va_list)
 	type_checker flags[] = {
 		{"+d", plusFlag},
 		{"+i", plusFlag},
+		{"-d", minusFlag},
+		{"-i", minusFlag},
 		{" d", spaceFlag},
 		{" i", spaceFlag},
 		{"#o", octFlag},

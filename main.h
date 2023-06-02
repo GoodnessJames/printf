@@ -48,6 +48,7 @@ int print_hexStr(va_list);
 /* Flag Prototypes */
 int plusFlag(va_list);
 int spaceFlag(va_list);
+int minusFlag(va_list minus);
 int octFlag(va_list);
 int hexFlag(va_list);
 int HEXflag(va_list);

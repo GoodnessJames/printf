@@ -14,6 +14,7 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
+	_printf("%-6d", -102498402);
 	_printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
 	_printf("- What did you say?\n- %S\n- That's what I thought.\n", "");
 	_printf("");

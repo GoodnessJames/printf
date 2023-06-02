@@ -97,6 +97,56 @@ int spaceFlag(va_list space)
 	count++;
 	return (count);
 }
+
+/**
+ * minusFlag - Prints an int with minus flag
+ * @minus: List of variadic arguments
+ *
+ * Return: Returns (count) ALWAYS
+ */
+int minusFlag(va_list minus)
+{
+	int n, num, digit, mod, input;
+	int count = 0;
+
+	input = va_arg(minus, int);
+	mod = input % 10;
+	input = input / 10;
+	if (mod >= 0)
+	{
+		_putchar('-');
+		count++;
+	}
+	if (mod < 0)
+	{
+		input = -input;
+		mod = -mod;
+		_putchar('-');
+		count++;
+	}
+	num = input;
+	digit = 1;
+	if (num > 0)
+	{
+		while ((num / 10) != 0)
+		{
+			num = num / 10;
+			digit = digit * 10;
+		}
+		while (digit >= 1)
+		{
+			n = input / digit;
+			_putchar(n + '0');
+			count++;
+			input = input % digit;
+			digit = digit / 10;
+		}
+	}
+	_putchar(mod + '0');
+	count++;
+	return (count);
+}
+
 /**
  * octFlag - Prints the octal equivalent of a int with prefix 0
  * @octF: List of variadic arguments
