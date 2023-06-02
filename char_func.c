@@ -48,7 +48,7 @@ int print_Str(va_list Str)
 	unsigned int count = 0;
 
 	Pstr = va_arg(Str, char *);
-	if (*Pstr == '\0')
+	if (Pstr == NULL)
 		Pstr = "(null)";
 	for (i = 0; Pstr[i]; i++)
 	{
