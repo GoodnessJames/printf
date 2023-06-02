@@ -77,3 +77,15 @@ int print_binary(va_list bi)
 	}
 	return (count);
 }
+
+/**
+ * print_percent - Prints the character '%'
+ * @args: List of variadic arguments
+ *
+ * Return: Return (1) ALWAYS
+ */
+int print_percent(__attribute__((unused)) va_list args)
+{
+	_putchar('%');
+	return (1);
+}

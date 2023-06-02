@@ -13,6 +13,7 @@ int(*specifier_parser(const char *format, int i))(va_list)
 	type_checker fmtArray[] = {
 		{"c", print_char},
 		{"s", print_str},
+		{"%", print_percent},
 		{"S", print_Str},
 		{"p", print_hexStr},
 		{"i", print_int},
@@ -36,6 +37,8 @@ int(*specifier_parser(const char *format, int i))(va_list)
 		{"#X", HEXflag},
 		{NULL, NULL}
 	};
+	if (format == NULL)
+		return (NULL);
 	for (index = 0; fmtArray[index].id; index++)
 	{
 		if (fmtArray[index].id[0] == format[i])
@@ -46,5 +49,5 @@ int(*specifier_parser(const char *format, int i))(va_list)
 		if (flags[index].id[0] == format[i] && flags[index].id[1] == format[i + 1])
 			return (flags[index].fPtr);
 	}
-	return (0);
+	return (NULL);
 }

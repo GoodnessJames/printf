@@ -11,6 +11,8 @@ int print_specialFormat(const char *format, int i)
 {
 	int count = 0;
 
+	if (format == NULL)
+		return (count);
 	if (format[i] != '%')
 	{
 		_putchar(format[i - 1]);
@@ -18,5 +20,6 @@ int print_specialFormat(const char *format, int i)
 	}
 	_putchar(format[i]);
 	count += 1;
+
 	return (count);
 }
