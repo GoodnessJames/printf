@@ -14,6 +14,12 @@ int main(void)
 	unsigned int ui;
 	void *addr;
 
+	_printf("%-6d", -102498402);
+	_printf("Complete the sentence: You %r nothing, Jon Snow.\n", "");
+	_printf("- What did you say?\n- %S\n- That's what I thought.\n", "");
+	_printf("");
+	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+	_printf("%S\n", "Best\nSchool");
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
 	ui = (unsigned int)INT_MAX + 1024;
