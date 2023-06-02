@@ -128,7 +128,7 @@ int print_revStr(va_list revStr)
 	int i = 0, count = 0;
 
 	str = va_arg(revStr, char *);
-	if (*str == '\0')
+	if (str == NULL)
 	{
 		str = ")llun(";
 	}
