@@ -4,7 +4,7 @@
  * print_char - Prints a character to the console
  * @chars: List of variadic arguments
  *
- * Return: Returns (1) ALWAYS
+ * Return: Return (1) ALWAYS
  */
 int print_char(va_list chars)
 {
