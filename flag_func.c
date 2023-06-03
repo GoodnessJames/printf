@@ -4,7 +4,7 @@
  * plusFlag - Prints an int with plus flag
  * @plus: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int plusFlag(va_list plus)
 {
@@ -53,7 +53,7 @@ int plusFlag(va_list plus)
  * spaceFlag - Prints an int with space flag
  * @space: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int spaceFlag(va_list space)
 {
@@ -102,7 +102,7 @@ int spaceFlag(va_list space)
  * minusFlag - Prints an int with minus flag
  * @minus: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int minusFlag(va_list minus)
 {
@@ -151,7 +151,7 @@ int minusFlag(va_list minus)
  * octFlag - Prints the octal equivalent of a int with prefix 0
  * @octF: List of variadic arguments
  *
- * Return: On SUCCESS, returns (count) and (-1) on FAILURE
+ * Return: On SUCCESS, return (count) and (-1) on FAILURE
  */
 int octFlag(va_list octF)
 {
@@ -180,7 +180,7 @@ int octFlag(va_list octF)
  * hexFlag - Prints the hex-equivalent of an int lowercase with prefix 0x
  * @hexF: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int hexFlag(va_list hexF)
 {
@@ -227,7 +227,7 @@ int hexFlag(va_list hexF)
  * HEXflag - Prints the hex-equivalent of an int UPPERCASE with prefix 0X
  * @HEXf: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int HEXflag(va_list HEXf)
 {
