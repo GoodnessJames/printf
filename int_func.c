@@ -47,7 +47,7 @@ int print_int(va_list nums)
  * print_binary - Convert an int to it's binary equivalent
  * @bi: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_binary(va_list bi)
 {
