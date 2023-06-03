@@ -3,7 +3,8 @@
 /**
  * print_uInt - Prints an unsigned int
  * @nums: List of variadic arguments
- * Return: Returns (count) ALWAYS
+ *
+ * Return: Return (count) ALWAYS
  */
 int print_uInt(va_list nums)
 {
