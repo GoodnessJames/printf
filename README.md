@@ -1,4 +1,4 @@
-# Project: 0x11. C - printf
+# Project Title: 0x11. C - printf
 
 This is a team project that involves writing a user-defined printf function that performs similar operations to the standard printf function.
 
