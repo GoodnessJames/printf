@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-/*
+.
+/**
  * File: main.h
  * Desc: This file contains all prototypes & struct required for the project
  */
