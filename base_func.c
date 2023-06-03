@@ -38,7 +38,7 @@ int print_uInt(va_list nums)
 /**
  * print_octBase - Prints an octal equivalent of an int
  * @oct: List of variadic arguments
- * Return: On SUCCESS, returns (count) and (-1) on FAILURE
+ * Return: On SUCCESS, return (count) and (-1) on FAILURE
  */
 int print_octBase(va_list oct)
 {
@@ -84,7 +84,7 @@ int print_octBase(va_list oct)
 /**
  * print_hexBase - Prints the hexadecimal equivalent of an integer in lowercase
  * @hex: List of variadic arguments
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_hexBase(va_list hex)
 {
@@ -117,7 +117,7 @@ int print_hexBase(va_list hex)
 /**
  * print_HEXbase - Prints the hexadecimal equivalent of an integer in UPPERCASE
  * @HEX: List of variadic arguments
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_HEXbase(va_list HEX)
 {
@@ -150,7 +150,7 @@ int print_HEXbase(va_list HEX)
 /**
  * print_hexStr - Prints a string and returns string length
  * @hexStr: List of variadic arguments
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_hexStr(va_list hexStr)
 {
