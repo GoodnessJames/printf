@@ -17,7 +17,7 @@ int print_char(va_list chars)
  * print_str - Prints a string to the console
  * @str: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_str(va_list str)
 {
@@ -40,7 +40,7 @@ int print_str(va_list str)
  * print_Str - Prints a string and returns the string length
  * @Str: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_Str(va_list Str)
 {
@@ -86,7 +86,7 @@ int print_Str(va_list Str)
 /**
  * print_rotString - prints the rot13'ed string
  * @rot: List of variadic arguments
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_rotString(va_list rot)
 {
@@ -120,7 +120,7 @@ int print_rotString(va_list rot)
  * print_revStr - Prints a string in reverse and returns the string length
  * @revStr: List of variadic arguments
  *
- * Return: Returns (count) ALWAYS
+ * Return: Return (count) ALWAYS
  */
 int print_revStr(va_list revStr)
 {
