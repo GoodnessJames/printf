@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-.
+
 /**
  * File: main.h
  * Desc: This file contains all prototypes & struct required for the project
@@ -48,7 +48,7 @@ int print_hexStr(va_list);
 /* Flag Prototypes */
 int plusFlag(va_list);
 int spaceFlag(va_list);
-int minusFlag(va_list minus);
+int minusFlag(va_list);
 int octFlag(va_list);
 int hexFlag(va_list);
 int HEXflag(va_list);
